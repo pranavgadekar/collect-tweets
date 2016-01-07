@@ -1,4 +1,4 @@
-package com.test.bufalo;
+package com.test.tweets;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -28,10 +28,10 @@ public class CollectTweets {
 	public static void main(String[] args) throws TwitterException, IOException, ParseException {
 		
 		ConfigurationBuilder cb = new ConfigurationBuilder();
-		cb.setOAuthConsumerKey("RGBcGHEhSQvzXgZ7IDMT1IyIm");
-        cb.setOAuthConsumerSecret("IA8lKFfIBuTHUrXm7o7s7MH2Hg9loX41gc709WsuBJoociElaj");
-        cb.setOAuthAccessToken("3305908472-9h3CfAVNeKzMYlsV8qN7TlvSSenu9soVhrnFDK9");
-        cb.setOAuthAccessTokenSecret("ILUYWIM6gZUJKqpRZqFcnOIFFVB1C5SGoCQKEWyh4ttwa");
+		cb.setOAuthConsumerKey("Your Customer Key");
+        cb.setOAuthConsumerSecret("Your Customer Secret");
+        cb.setOAuthAccessToken("Your Access Token");
+        cb.setOAuthAccessTokenSecret("Your Access Token Secret");
         cb.setDebugEnabled(true);
         cb.setJSONStoreEnabled(true);
         
@@ -40,10 +40,10 @@ public class CollectTweets {
         BufferedWriter bw = null;
         
 		  Twitter twitter = new TwitterFactory(cb.build()).getInstance();
-		  //Query query = new Query("(us open) OR (cricket) OR (football) OR (hockey) OR (sport) OR (racing)");
+		  Query query = new Query("(us open) OR (cricket) OR (football) OR (hockey) OR (sport) OR (racing)");
 		  //Query query = new Query("(us open) OR (Kricket) OR (Fußball) OR (hockey) OR (sport) OR (Rennsport)");
-		  Query query = new Query("(us open) OR (крикет) OR (футбол) OR (хоккей) OR (спортивный) OR (гоночный)");
-		  query.setLang("ru");
+		  //Query query = new Query("(us open) OR (крикет) OR (футбол) OR (хоккей) OR (спортивный) OR (гоночный)");
+		  query.setLang("en");
 		  query.setCount(100);
 
 		  try {
