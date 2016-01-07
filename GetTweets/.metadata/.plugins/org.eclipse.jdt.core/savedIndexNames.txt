@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+H:\Pranav IT-stuff\workspace\javaWorkspace\Hello-World\.metadata\.plugins\org.eclipse.jdt.core
